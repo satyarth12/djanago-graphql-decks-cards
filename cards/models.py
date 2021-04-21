@@ -14,7 +14,7 @@ class Card(Timestamps):
         (2, '3 Days'),
         (3, '7 Days'),
         (4, '16 Days'),
-        (5, '30 Days'),
+        (5, '30 Days')
 		)
 	bucket = models.IntegerField(choices=buckets, default=1)
 	next_review_at = models.DateTimeField(default=timezone.now())

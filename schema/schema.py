@@ -12,7 +12,8 @@ from decks.schema import (
 )
 from cards.schema import (
     CardType,
-    CardMutation
+    CardMutation,
+    UpdateCardMutation
 )
 
 
@@ -25,6 +26,7 @@ class UserType(DjangoObjectType):
 class Mutation(graphene.ObjectType):
     card_mutation = CardMutation.Field()
     deck_mutation = DeckMutation.Field()
+    update_card_mutation = UpdateCardMutation.Field()
 
 
 class Query(graphene.ObjectType):
